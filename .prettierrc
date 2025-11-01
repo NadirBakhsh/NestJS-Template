@@ -6,5 +6,15 @@
   "tabWidth": 2,
   "bracketSpacing": true,
   "endOfLine": "lf",
-  "bracketSameLine": false
+  "bracketSameLine": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^@nestjs/(.*)$",
+    "^rxjs(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^src/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
