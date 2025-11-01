@@ -5,7 +5,6 @@ const environmentZodSchema = z.object({
   environment: z
     .enum(['development', 'production', 'staging'])
     .default('development'),
-  apiVersion: z.string().default('1.0'),
 });
 
 const environmentSchema = {

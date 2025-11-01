@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import appConfig from './app.config';
-import { ConfigModule } from '@nestjs/config/dist';
+import { ConfigModule } from '@nestjs/config';
 import environmentSchema from './environment.validation';
+import serverConfig from './server.config';
 
 const ENV = process.env.NODE_ENV || 'development';
 
@@ -10,7 +10,7 @@ const ENV = process.env.NODE_ENV || 'development';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: !ENV ? '.env.development' : `.env.${ENV}`,
-      load: [appConfig],
+      load: [serverConfig],
       validationSchema: environmentSchema,
     }),
   ],
