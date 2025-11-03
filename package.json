@@ -6,6 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "install": "node -e \"try{require('child_process').execSync('pnpm -v',{stdio:'ignore'})}catch(e){console.log('pnpm not found - installing...');require('child_process').execSync('npm i -g pnpm',{stdio:'inherit'})}require('child_process').execSync('pnpm run prepare && pnpm install',{stdio:'inherit'})\"",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
