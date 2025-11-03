@@ -20,7 +20,7 @@ npm run start:dev
 
 #### configure in main branch
 
-- **TypeScript**: Fully typed codebase for better developer experience and fewer runtime errors.
-- **ESLint and Prettier**: Code consistency and error prevention.
-- **Conventional commits**: Standardized commit history management.
-- **Husky**: Git hooks for linting and testing before commits.
+- [**TypeScript**](https://www.typescriptlang.org/): Fully typed codebase for better developer experience and fewer runtime errors.
+- [**ESLint**](https://eslint.org/) and [**Prettier**](https://prettier.io/): Code consistency and error prevention.
+- [**Conventional commits**](https://www.conventionalcommits.org/en/v1.0.0/): Standardized commit history management.
+- [**Husky**](https://typicode.github.io/husky/#/): Git hooks for linting and testing before commits.
