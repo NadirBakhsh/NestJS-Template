@@ -11,7 +11,16 @@ This **NestJS Starter Template Repo** focuses on strategic simplicity for enterp
 Clone the repo, install dependencies with pnpm, then run the project-specific install script.
 
 ```bash
-git clone <repo-url> && cd <repo-dir>
+git clone https://github.com/NadirBakhsh/NestJS-Template.git && cd NestJS-Template
 pnpm run install or npm run install
 npm run start:dev
 ```
+
+### Integrated features
+
+##### configure in main branch
+
+- **TypeScript**: Fully typed codebase for better developer experience and fewer runtime errors.
+- **ESLint and Prettier**: Code consistency and error prevention.
+- **Conventional commits**: Standardized commit history management.
+- **Husky**: Git hooks for linting and testing before commits.
