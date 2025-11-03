@@ -18,7 +18,7 @@ npm run start:dev
 
 ### Integrated features
 
-##### configure in main branch
+#### configure in main branch
 
 - **TypeScript**: Fully typed codebase for better developer experience and fewer runtime errors.
 - **ESLint and Prettier**: Code consistency and error prevention.
