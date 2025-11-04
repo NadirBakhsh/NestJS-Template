@@ -6,7 +6,6 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "install": "node -e \"try{require('child_process').execSync('pnpm -v',{stdio:'ignore'})}catch(e){console.log('pnpm not found - installing...');require('child_process').execSync('npm i -g pnpm',{stdio:'inherit'})}require('child_process').execSync('pnpm run prepare && pnpm install',{stdio:'inherit'})\"",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -26,11 +25,19 @@
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "crypto": "^1.0.1",
+    "nest-winston": "^1.10.2",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
@@ -45,7 +52,9 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
     "globals": "^16.0.0",
+    "husky": "^8.0.0",
     "jest": "^30.0.0",
+    "lint-staged": "^13.0.0",
     "prettier": "^3.4.2",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
@@ -55,10 +64,7 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
-    "@commitlint/cli": "^17.0.0"
+    "winston-transport": "^4.9.0"
   },
   "jest": {
     "moduleFileExtensions": [
