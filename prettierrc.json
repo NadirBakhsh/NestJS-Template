@@ -1,5 +1,5 @@
 {
-  "singleQuote": true,
+  "doubleQuote": false,
   "trailingComma": "all",
   "printWidth": 80,
   "useTabs": false,
@@ -16,5 +16,6 @@
     "^[./]"
   ],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "singleQuote": true
 }

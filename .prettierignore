@@ -1,0 +1,49 @@
+# VCS and dependencies
+.git
+node_modules
+
+# Build outputs
+dist
+build
+out
+
+# Test artifacts
+coverage
+.nyc_output
+
+# Caches
+.cache
+.esbuild
+.tscache
+
+# Logs and temp
+logs
+*.log
+tmp
+temp
+
+# Generated assets/docs
+public
+static
+uploads
+storage
+
+# Generated API artifacts (if using Swagger/GraphQL)
+openapi.json
+swagger.json
+schema.gql
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Lockfiles
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# OS/Editor junk
+.DS_Store
+.idea
+.vscode

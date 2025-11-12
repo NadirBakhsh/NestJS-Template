@@ -1,10 +1,10 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 // Replace the plain Zod schema export with a Zod schema + Joi-compatible adapter.
 const environmentZodSchema = z.object({
   environment: z
-    .enum(['development', 'production', 'staging'])
-    .default('development'),
+    .enum(["development", "production", "staging"])
+    .default("development"),
 });
 
 const environmentSchema = {
@@ -15,8 +15,8 @@ const environmentSchema = {
       return { value: result.data };
     }
     const message = result.error.issues
-      .map((i) => `${i.path.join('.') || 'root'}: ${i.message}`)
-      .join('; ');
+      .map((i) => `${i.path.join(".") || "root"}: ${i.message}`)
+      .join("; ");
     return { error: new Error(message) };
   },
 };

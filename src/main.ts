@@ -1,13 +1,13 @@
-import { NestFactory } from '@nestjs/core';
+import { NestFactory } from "@nestjs/core";
 
-import { AppModule } from './app.module';
-import { setupSwagger } from './swagger/swagger.config';
+import { AppModule } from "./app.module";
+import { setupSwagger } from "./swagger/swagger.config";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Setup global prefix
-  app.setGlobalPrefix('api/v1');
+  app.setGlobalPrefix("api/v1");
 
   // Swagger Setup
   setupSwagger(app);
@@ -16,6 +16,6 @@ async function bootstrap() {
 }
 
 bootstrap().catch((error) => {
-  console.error('Application failed to start:', error);
+  console.error("Application failed to start:", error);
   process.exit(1);
 });
