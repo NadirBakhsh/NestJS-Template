@@ -1,5 +1,5 @@
-import { INestApplication } from "@nestjs/common";
-import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import { INestApplication } from "@nestjs/common"
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger"
 
 export function setupSwagger(app: INestApplication): void {
   const config = new DocumentBuilder()
@@ -8,18 +8,19 @@ export function setupSwagger(app: INestApplication): void {
     .setVersion("1.0")
     .addServer("http://localhost:5000", "Local environment")
     .addBearerAuth()
-    .build();
+    .build()
 
-  const document = SwaggerModule.createDocument(app, config);
+  const document = SwaggerModule.createDocument(app, config)
 
   SwaggerModule.setup("api/docs", app, document, {
     swaggerOptions: {
       persistAuthorization: true, // Keep token between refreshes
-      displayRequestDuration: true,
+      displayRequestDuration: true
     },
     customCss: `
       .authorization__btn, .auth-wrapper { display: none !important; }
+      .version-stamp { display: none !important; }
     `,
-    customSiteTitle: "NestJS Swagger UI",
-  });
+    customSiteTitle: "NestJS Swagger UI"
+  })
 }

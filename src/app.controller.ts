@@ -21,7 +21,7 @@ class HealthResponseDto {
   timestamp: string;
 }
 
-@ApiTags("Health")
+@ApiTags("APP")
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
