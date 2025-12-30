@@ -18,9 +18,4 @@ npm run start:dev
 
 ### Integrated features
 
-#### configure in main branch
-
-- [**TypeScript**](https://www.typescriptlang.org/): Fully typed codebase for better developer experience and fewer runtime errors.
-- [**ESLint**](https://eslint.org/) and [**Prettier**](https://prettier.io/): Code consistency and error prevention.
-- [**Conventional commits**](https://www.conventionalcommits.org/en/v1.0.0/): Standardized commit history management.
-- [**Husky**](https://typicode.github.io/husky/#/): Git hooks for linting and testing before commits.
+- **PostgreSQL (feat/setup-postgresql)** database integration with TypeORM [Pull Request](https://github.com/NadirBakhsh/NestJS-Template/pull/1)
