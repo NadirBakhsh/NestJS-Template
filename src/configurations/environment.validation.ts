@@ -1,24 +1,9 @@
-import { z } from "zod";
+import * as Joi from "joi";
 
-// Replace the plain Zod schema export with a Zod schema + Joi-compatible adapter.
-const environmentZodSchema = z.object({
-  environment: z
-    .enum(["development", "production", "staging"])
+const environmentSchema = Joi.object({
+  environment: Joi.string()
+    .valid("development", "production", "staging")
     .default("development"),
 });
-
-const environmentSchema = {
-  // Mimic Joi's `validate` API used by ConfigModule
-  validate(input: Record<string, unknown>) {
-    const result = environmentZodSchema.safeParse(input);
-    if (result.success) {
-      return { value: result.data };
-    }
-    const message = result.error.issues
-      .map((i) => `${i.path.join(".") || "root"}: ${i.message}`)
-      .join("; ");
-    return { error: new Error(message) };
-  },
-};
 
 export default environmentSchema;
