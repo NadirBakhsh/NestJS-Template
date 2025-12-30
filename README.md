@@ -16,6 +16,7 @@ pnpm run install or npm run install
 npm run start:dev
 ```
 
-### Integrated features
+### Features
 
+##### Database Integrations
 - **PostgreSQL (feat/setup-postgresql)** database integration with TypeORM [Pull Request](https://github.com/NadirBakhsh/NestJS-Template/pull/1)
