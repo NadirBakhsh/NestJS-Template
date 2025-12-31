@@ -20,3 +20,5 @@ npm run start:dev
 
 ##### Database Integrations
 - **PostgreSQL (feat/setup-postgresql)** database integration with TypeORM [Pull Request](https://github.com/NadirBakhsh/NestJS-Template/pull/1)
+
+- **MySQL (feat/setup-mysql)** database integration with TypeORM [Pull Request](https://github.com/NadirBakhsh/NestJS-Template/pull/2)
